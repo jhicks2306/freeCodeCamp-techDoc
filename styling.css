@@ -2,7 +2,7 @@ html, body {
   height: 100%;
   margin: 0;
 }
-/*-------define grid for the page-------*/
+/*-------define grid-------*/
 body {
   display: grid;
   grid-template-columns: 20vw 1fr;
@@ -12,7 +12,6 @@ body {
     "navbar maindoc"
     "footer footer";
 }
-
 /*---------style grid elements--------*/
 #title-bar {
   grid-area: titlebar;
@@ -22,6 +21,7 @@ body {
   width: 100vw;
   position: fixed;
   z-index: 5;
+  font-family: 'Roboto', sans-serif;
  }
 
 #navbar {
@@ -30,6 +30,7 @@ body {
   flex-direction: column;
   overflow: auto;
   background-color: #f2f2f2;
+  font-family: 'Roboto', sans-serif;
 }
 
 #nav-header {
@@ -47,6 +48,7 @@ body {
   flex-direction: column;
   padding: 5vh 1vh 1vh 1vh;
 }
+
 #main-doc {
   grid-area: maindoc;
   display: flex;
@@ -55,6 +57,7 @@ body {
   height: 92vh;
   padding: 1vh;
   background-color: ;
+  font-family: 'Work Sans', sans-serif;
 }
 
 #footer {
