@@ -1,68 +1,76 @@
 html, body {
   height: 100%;
   margin: 0;
+
 }
-/*-------define grid-------*/
-body {
-  display: grid;
-  grid-template-columns: 20vw 1fr;
-  grid-template-rows: 8vh 1fr 5vh;
-  grid-template-areas:
-    "titlebar titlebar"
-    "navbar maindoc"
-    "footer footer";
-}
-/*---------style grid elements--------*/
+
 #title-bar {
-  grid-area: titlebar;
-  background-color: #a6a6a6;
-  box-shadow: 0.5vw 0.5vw 0.2vw #e6e6e6;
-  height: 8vh;
+  background-color: #4d4d4d;
+  box-shadow: 0.5vh 0.5vh 0.2vh #e6e6e6;
+  height: 8.5vh;
   width: 100vw;
   position: fixed;
+  padding: 2vh;
   z-index: 5;
   font-family: 'Roboto', sans-serif;
+  font-size: 3vh;
+  color: white;
  }
-
-#navbar {
-  grid-area: navbar;
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
-  background-color: #f2f2f2;
-  font-family: 'Roboto', sans-serif;
+#spacer {
+  height: 14vh;
+}
+#nav-header {
+  position: fixed;
+  height: 4vh;
+  width: 20vw;
+  background-color: #e6e6e6;
+  text-align: center;
+  padding: 1vh 0vw 0vh 0vw;
 }
 
-#nav-header {
-  position: absolute;  /* used to fix sidebar header in position */
-  display: flex; /* flex to allow perfect centering */
-  height: 5vh;
+#navbar {
+  position: fixed;
+  margin-top: 13vh;
+  height: 87vh;
+  background-color: #e6e6e6;
   width: 20vw;
-  justify-content: center;
-  align-items: center;
-  background-color: #f2f2f2;
+  overflow-y: scroll;
+  font-family: 'Roboto', sans-serif;
+    border-bottom: 1px solid #f2f2f2;
 }
 
 .nav-content {
   display: flex;
   flex-direction: column;
-  padding: 5vh 1vh 1vh 1vh;
+  margin-top: 6vh;
+  padding: 1vh 2vw 1vh 2vw;
 }
 
 #main-doc {
-  grid-area: maindoc;
-  display: flex;
-  flex-direction: row;
-  overflow: auto;
-  height: 92vh;
-  padding: 1vh;
-  background-color: ;
-  font-family: 'Work Sans', sans-serif;
+  margin-left: 20vw;
+  padding: 1vh 2vw 1vh 2vw;
+  font-family: 'Work sans', sans-serif;
+}
+footer {
+  margin-left: 20vw;
+  font-family: 'Roboto', sans-serif;
+  border-top: 1px solid #f2f2f2;
 }
 
-#footer {
-  grid-area: footer;
-  border-width: thin;
-  border-top: 1px solid #f2f2f2;
+/* adjustments to allow linked sections and fixed header */
+section::before {
+  display: block;
+  content: " ";
+  height: 14vh;
+  margin-top: -14vh;
+  visibility: hidden;
+  pointer-events: none;
+}
 
+main::before {
+  display: block;
+  content: " ";
+  height: 13.1vh;
+  visibility: hidden;
+  pointer-events: none;
 }
