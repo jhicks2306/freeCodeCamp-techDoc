@@ -48,6 +48,7 @@ html, body {
   padding: 1vh 2vw 1vh 2vw;
   font-family: 'Work sans', sans-serif;
 }
+
 footer {
   margin-left: 20vw;
   font-family: 'Roboto', sans-serif;
@@ -62,6 +63,7 @@ section::before {
   margin-top: -14vh;
   visibility: hidden;
   pointer-events: none;
+  background-color: blue;
 }
 
 main::before {
@@ -70,4 +72,11 @@ main::before {
   height: 13.1vh;
   visibility: hidden;
   pointer-events: none;
+  background-color: green;
+}
+
+pre {
+  background-color: #f2f2f2;
+  color: #666666;
+  margin: 2vh 2vw 2vh 2vw;
 }
